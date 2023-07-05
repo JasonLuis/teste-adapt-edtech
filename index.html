@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ac auctor augue mauris augue  </title>
+
+  <script src="js/adapt_scorm.js"></script>
+
+  <script>
+    const $ = scorm.$
+    window.top.scorm = scorm  
+    
+    window.endListener = function (e) {
+        e.preventDefault();
+        e.returnValue = '';
+    }
+
+    // window.addEventListener('beforeunload', window.endListener);
+
+    $(() => {
+      if(scorm.data.curr > 0) {
+        if(window.top.confirm('Você quer continuar de onde parou?')){
+          $('iframe').attr('src', `./modulo-${scorm.data.curr}.html`)
+        }
+      }
+
+      window.top.scorm.changeLocation = scorm.changeLocation = (module) => {
+        $('iframe').attr('src', module)
+      }
+    })
+  </script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      overflow:hidden;
+      position: fixed;
+    }
+    iframe::-webkit-scrollbar {
+         display: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe frameborder="0" marginheight="0px" marginwidth="0px" src="modulo-1.html" />
+</body>
+</html>

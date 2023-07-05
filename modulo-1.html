@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Fri Sep 03 2021 21:15:03 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="6132866aeb2b4f3c8cb0e55c" data-wf-site="61328588219ec1cbc8a4eaec">
+
+<head>
+  <meta charset="utf-8">
+  <title>Metodologia de Ensino de Geografia no Ensino Médio  </title>
+  <meta content="modulo_1" property="og:title">
+  <meta content="modulo_1" property="twitter:title">
+
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <script type="text/javascript" src="js/rybena.js"></script>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link rel="stylesheet" href="./css/style-quiz.css">
+  <link rel="stylesheet" href="./css/style-chatbot.css">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="./vendor/lity/css/lity.min.css" rel="stylesheet">
+  <link href="css/final-fundacao-pg.webflow.css" rel="stylesheet" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]
+      }
+    });
+  </script>
+
+  <script type="text/javascript">
+    ! function (o, c) {
+      var n = c.documentElement,
+        t = " w-mod-";
+      n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+    }(window, document);
+  </script>
+
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/adapt_scorm.js"></script>
+  <script src="./js/setup.js"></script>
+  <script src="./js/script-chatbot.js"></script>
+  <script src="./js/cookie.js"></script>
+
+  <script type="text/javascript" src="js/top-scripts.js"></script>
+
+  <!-- equações em html -->
+  <script>
+    MathJax = {
+      loader: {
+        load: ['input/asciimath', 'output/chtml']
+      }
+    }
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
+  <!-- equações em html -->
+
+  <script type="text/javascript" src="./lib/rangy-core.js"></script>
+  <script type="text/javascript" src="./lib/rangy-classapplier.js"></script>
+  <script type="text/javascript" src="./js/extra_scripts.js"></script>
+
+  <script type="text/javascript">
+
+    function gEBI(id) {
+      return document.getElementById(id);
+    }
+
+    var amareloBgApplier, orangeBgApplier, greenBgApplier;
+
+    function toggleamareloBg() {
+      amareloBgApplier.toggleSelection();
+    }
+
+    function toggleorangeBg() {
+      orangeBgApplier.toggleSelection();
+    }
+
+    function togglegreenBg() {
+      greenBgApplier.toggleSelection();
+    }
+
+    window.onload = function () {
+      rangy.init();
+
+      // Enable buttons
+      var classApplierModule = rangy.modules.ClassApplier;
+
+      // Next line is pure paranoia: it will only return false if the browser has no support for ranges,
+      // selections or TextRanges. Even IE 5 would pass this test.
+      if (rangy.supported && classApplierModule && classApplierModule.supported) {
+        orangeBgApplier = rangy.createClassApplier("orangeBg", {
+          tagNames: ["span", "img"]
+        });
+
+        amareloBgApplier = rangy.createClassApplier("amareloBg", {
+          tagNames: ["span", "a", "b", "img"]
+        });
+
+        greenBgApplier = rangy.createClassApplier("greenBg", {
+          tagNames: ["span", "a", "b", "img"]
+        });
+
+        var toggleorangeBgButton = gEBI("toggleorangeBgButton");
+        toggleorangeBgButton.disabled = false;
+        toggleorangeBgButton.ontouchstart = toggleorangeBgButton.onmousedown = function () {
+          toggleorangeBg();
+          return false;
+        };
+
+        var toggleamareloBgButton = gEBI("toggleamareloBgButton");
+        toggleamareloBgButton.disabled = false;
+        toggleamareloBgButton.ontouchstart = toggleamareloBgButton.onmousedown = function () {
+          toggleamareloBg();
+          return false;
+        };
+
+        var togglegreenBgButton = gEBI("togglegreenBgButton");
+        togglegreenBgButton.disabled = false;
+        togglegreenBgButton.ontouchstart = togglegreenBgButton.onmousedown = function () {
+          togglegreenBg();
+          return false;
+        };
+      }
+    };
+
+  </script>
+
+  <style type="text/css">
+    *.amareloBg {
+      background-color: yellow;
+      color: #000;
+    }
+
+    *.orangeBg {
+      background-color: #e6791f;
+    }
+
+    img.orangeBg {
+      border: solid #e6791f 3px;
+    }
+
+    *.greenBg {
+      background-color: #6bb866;
+      color: #000;
+    }
+
+    .tooltipo.marcacao {
+      right: 200px;
+      bottom: 0px;
+    }
+  </style>
+
+
+  <style>
+    .ocutar {
+      display: none;
+    }
+  </style>
+  <script></script>
+  <script type="text/javascript">
+    function abrirJanela(pagina, largura, altura) {
+      var esquerda = (screen.width - largura) / 2;
+      var topo = (screen.height - altura) / 2;
+      minhaJanela = window.open(pagina, '', 'height=' + altura + ', width=' + largura + ', top=' + topo + ', left=' + esquerda);
+    }
+
+  </script>
+  <style>
+    .imagem1 {
+      background-image: url("images/img-mod1/cod04.jpg");
+    }
+
+    .img1a {
+      background-image: url("images/img-mod1/slider-1a.jpg");
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .img1b {
+      background-image: url("images/img-mod1/slider-1b.jpg");
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #constructor-modal .modal-dialog {
+      max-width: 95%;
+    }
+
+    @media (min-width: 768px) {
+      #constructor-modal .modal-dialog {
+        max-width: 60%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/opendyslexic.css">
+</head>
+
+<body class="body-home">
+  <!-- MARCA TEXTO -->
+  <div class="marcacao" id="buttons">
+    <div class="botoes">
+      <div class="tooltipo marcacao" style="background-color: #d7d7d7;">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 320 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
+        </svg>
+        <span class="tooltiptext">Para utilizar o marcador de texto, selecione a área que deseja destacar e defina a cor
+          de sua preferência. Para remover a marcação, defina o trecho e selecione a cor novamente. Se deseja trocar a
+          cor de um trecho, retire a marcação antiga antes de aplicar uma nova marcação.
+        </span>
+      </div>
+      <input type="button" disabled id="toggleorangeBgButton" value="" unselectable="on" class="unselectable subBotoes">
+      <input type="button" disabled id="toggleamareloBgButton" value="" unselectable="on"
+        class="unselectable subBotoes">
+      <input type="button" disabled id="togglegreenBgButton" value="" unselectable="on" class="unselectable subBotoes">
+    </div>
+    <div class="botao-menu">
+      <button id="toggleBtn" onclick="abreMarcaTexto()"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M315 315l158.4-215L444.1 70.6 229 229 315 315zm-187 5l0 0V248.3c0-15.3 7.2-29.6 19.5-38.6L420.6 8.4C428 2.9 437 0 446.2 0c11.4 0 22.4 4.5 30.5 12.6l54.8 54.8c8.1 8.1 12.6 19 12.6 30.5c0 9.2-2.9 18.2-8.4 25.6L334.4 396.5c-9 12.3-23.4 19.5-38.6 19.5H224l-25.4 25.4c-12.5 12.5-32.8 12.5-45.3 0l-50.7-50.7c-12.5-12.5-12.5-32.8 0-45.3L128 320zM7 466.3l63-63 70.6 70.6-31 31c-4.5 4.5-10.6 7-17 7H24c-13.3 0-24-10.7-24-24v-4.7c0-6.4 2.5-12.5 7-17z" />
+        </svg></button>
+    </div>
+  </div>
+  <!-- MARCA TEXTO -->
+
+  <section class="highlight-target">
+    <div class="capa-modulo wf-section">
+      <div class="main-capa">
+        <div class="titulo">
+          <h4 class="modulo-titulo">Unidade</h4>
+          <h1 class="heading">
+            <strong class="bold-text-91">Propostas Curriculares no Ensino de Geografia para o Ensino Médio</strong>
+          </h1>
+          <div class="linha-branca"></div>
+          <p class="heading-info" style="margin-top: 10px;" id="">
+            <b>Conteudista:</b> Prof.ª Dra. Vivian Fiori <br>
+            <b>Revisão Textual:</b> Maria Thereza Carvalho Rodriguez Guisande
+          </p>
+          <a href="#animated-arrow-target" id="animated-arrow" data-w-id="7d80a05a-3461-8a45-d9ea-7e7bbfb45f19"
+            style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+            class="setaa w-inline-block">
+            <img src="images/arrow-whitte.png" loading="lazy" data-w-id="19b31c16-65ed-b662-9fc2-141051a748aa"
+              sizes="(max-width: 1279px) 40px, (max-width: 1439px) 3vw, 40px"
+              srcset="images/arrow-whitte-p-500.png 500w, images/arrow-whitte.png 512w" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="img-capa bg-img-capa"></div>
+      <div id="animated-arrow-target" class="animated-arrow-target"></div>
+    </div>
+    <div class="bg-final1">
+      <div class="c-p-cons">
+        <h2 class="heading-sintese">Objetivos da Unidade</h2>
+        <div class="linha-branca linha-br linha-sintese"></div>
+        <ul role="list1" class="bullet-conteudo">
+          <li class="list-item1"> Apresentar as propostas curriculares dos PCNs e da BNCC;</li>
+          <li class="list-item1"> Analisar a questão da interdisciplinaridade e o ensino de Geografia.</li>
+        </ul>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+    <!-- VIDEOAULA -->
+   
+    <!-- VIDEOAULA -->
+    <div class="content wf-section">
+      <div id="content-1">
+        <div class="bg-apresentacao">
+          <div class="box--fundo" style="padding-top: 10px; padding-bottom: 30px;">
+            <!-------------------CONTEÚDO-------------------->
+           
+  </section>
+
+
+
+
+  <!-- MENU DO TOPO -->
+  <div class="nav wf-section">
+    <div class="menu">
+      <div class="main-menu">
+        <div class="logo">
+          <img src="images/logo-clean.png" loading="lazy" alt="" class="imagem-logo" style="width: 55%;">
+        </div>
+        <div class="titulo-cursoi">
+          <span class="titulo-curso-int">Metodologia de Ensino de Geografia no Ensino Médio</span>
+        </div>
+        <div class="dropdown-trigger h1-tiulo">
+          <div style="background-color:rgb(255,255,255)" class="div-block mein"></div>
+          <div style="background-color:rgb(255,255,255)" class="div-block mein"></div>
+          <div style="background-color:rgb(255,255,255)" class="div-block mein"></div>
+        </div>
+        <div style="opacity:0;display:none" class="nav-menu">
+          <div class="accordion" id="accordionExample">
+            <div class="div-block-3">
+              <div class="div-block-4">Acessibilidade</div>
+              <div class="text-acess">
+                <div class="acess-font">Fonte:</div>
+                <div class="acess-font-2">Contraste:</div>
+              </div>
+              <div class="div-block-5">
+                <div class="bt-font">
+                  <div id="a_mais" class="bt-font-am">
+                    <div class="text-block-3">Aa</div>
+                    <img src="images/plus.svg" loading="lazy" alt="" class="image-20">
+                  </div>
+                  <div id="a_menos" class="bt-font-am">
+                    <div class="text-block-3">Aa</div>
+                    <img src="images/menos.svg" loading="lazy" alt="" class="image-20">
+                  </div>
+                  <div id="a_reset" class="bt-font-am">
+                    <div class="text-block-3">Aa</div>
+                    <img src="images/reset.svg" loading="lazy" alt="" class="image-20 reset-bt">
+                  </div>
+                </div>
+                <div class="div-block-6">
+                  <div class="div-block-7">
+                    <div class="icon-a">
+                      <img src="images/icon-contraste.png " loading="lazy" alt="" class="image-21 moon">
+                      <a href="#" class="toogle-switch w-inline-block" data-id="moon">
+                        <div class="toogle-switch-before"></div>
+                        <div class="toogle-switch-checked"></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="div-block-7">
+                    <div class="icon-a">
+                      <img src="images/moon.svg" loading="lazy" alt="" class="image-21">
+                      <a href="#" class="toogle-switch w-inline-block" data-id="sun">
+                        <div class="toogle-switch-before"></div>
+                        <div class="toogle-switch-checked"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="div-block-3 col-accessibility container-functionalities">
+              <ul class="access-options">
+                <li class="access-options-li  option-extra">
+                  <div>
+                    <img src="./images/icon-libras.png" alt="Ícone libras" />Libras
+                  </div>
+                  <div class="access-options-toggle">
+                    <div class="flag-toogle-switch" data-function="libras"></div>
+                  </div>
+                </li>
+                <li class="access-options-li">
+                  <div>
+                    <img src="./images/icon-dislexia.png" alt="Ícone dislexia" />Dislexia
+                  </div>
+                  <div class="access-options-toggle">
+                    <div class="flag-toogle-switch" data-function="dislexia"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="header-bar-progress">
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/MENU DO TOPO -->
+  <!-- Modal -->
+  <div class="modal fade" id="constructor-modal" tabindex="-1" aria-labelledby="construtoresModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/img-mod1/construtor-modal.png" loading="lazy" class="w-100" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="./vendor/lity/js/lity.min.js"></script>
+  <script src="./vendor/texthighlighter/js/TextHighlighter.min.js"></script>
+  <!-- quiz -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script type="module" src="./js/script-quiz.js" defer></script>
+
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <div vw id="js-btn-libras" class="enabled" style="display: none;">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script type="text/javascript">
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    $(function () {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("container-general").style.display = "block";
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      if (urlParams.has('pdf')) {
+        const isPDF = urlParams.get('pdf');
+        document.querySelector('body').classList.add('is-pdf');
+        if (isPDF == 'true') {
+          console.log('IS PDF');
+          document.querySelector('body').classList.add('is-pdf');
+          let element = document.querySelector('body');
+          const body = document.querySelector('body');
+          const loading = document.querySelector('#loading .content .blink');
+          const classIsPdf = 'is-pdf';
+          const timestamp = new Date().getTime();
+          const code = parseInt(Math.random() * (timestamp - 1) + 1);
+          const namePDF = 'adapt-ead-' + code + '.pdf';
+          let opt = {
+            margin: 0,
+            filename: namePDF,
+            image: {
+              type: 'jpeg',
+              quality: 0.98
+            },
+            html2canvas: {
+              scale: 2
+            },
+            jsPDF: {
+              unit: 'in',
+              format: 'A4',
+              orientation: 'portrait'
+            }
+          };
+          html2pdf().set(opt).from(element).toPdf().get('pdf').then(function (pdf) {
+            const url = pdf.output('bloburl');
+            window.location.href = url;
+          });
+        }
+      }
+      (function () {
+        $('.box').click(function () {
+          $(this).toggleClass('selected');
+        });
+        let sandbox = document.getElementById('body');
+      })();
+      $(document).ready(function ($) {
+        const btnPdf = document.querySelector('.btn-download-pdf');
+        btnPdf.addEventListener('click', (e) => {
+          const URL = window.location + '?pdf=true';
+          const win = window.open(URL, "_blank");
+        });
+      });
+      $(function () {
+        $(window).on("load resize ", function () {
+          var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+          $('.tbl-header').css({
+            'padding-right': scrollWidth
+          });
+        }).resize();
+      });
+      progressModules(1);
+    });
+  </script>
+</body>
+
+</html>

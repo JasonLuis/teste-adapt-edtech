@@ -1,0 +1,1472 @@
+<!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Fri Sep 03 2021 21:15:03 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="6132866aeb2b4f3c8cb0e55c" data-wf-site="61328588219ec1cbc8a4eaec">
+
+<head>
+	<meta charset="utf-8">
+
+	<!-- ======================================================================== -->
+	<!-- ============== INCLUIR TÍTULO DO MÓDULO ======================= -->
+	<!-- ======================================================================== -->
+
+	<title>Galeria de Recursos</title>
+	<meta content="modulo_1" property="og:title">
+	<meta content="modulo_1" property="twitter:title">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="Webflow" name="generator">
+
+	<!-- bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+	<link rel="stylesheet" href="./css/style_unice.css">
+	<link rel="stylesheet" href="./css/style-quiz.css">
+	<link rel="stylesheet" href="./css/style-chatbot.css">
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="css/webflow.css" rel="stylesheet" type="text/css">
+	<link href="./vendor/lity/css/lity.min.css" rel="stylesheet">
+	<link href="css/final-fundacao-pg.webflow.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		WebFont.load({
+			google: {
+				families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic",
+					"Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+				]
+			}
+		});
+	</script>
+	<!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+	<script type="text/javascript">
+		! function (o, c) {
+			var n = c.documentElement,
+				t = " w-mod-";
+			n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className +=
+				t + "touch")
+		}(window, document);
+	</script>
+	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="images/webclip.png" rel="apple-touch-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/adapt_scorm.js"></script>
+	<script type="text/javascript" src="js/top-scripts.js"></script>
+	<script src="./js/script_unice.js"></script>
+
+
+	<script type="text/javascript" src="./lib/rangy-core.js"></script>
+	<script type="text/javascript" src="./lib/rangy-classapplier.js"></script>
+	<script type="text/javascript" src="./js/extra_scripts.js"></script>
+
+	<!-- equações em html -->
+	<script>
+		MathJax = {
+			loader: {
+				load: ['input/asciimath', 'output/chtml']
+			}
+		}
+	</script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
+	<!-- equações em html -->
+
+	<script type="text/javascript">
+		function gEBI(id) {
+			return document.getElementById(id);
+		}
+
+		var amareloBgApplier, orangeBgApplier, greenBgApplier;
+
+		function toggleamareloBg() {
+			amareloBgApplier.toggleSelection();
+		}
+
+		function toggleorangeBg() {
+			orangeBgApplier.toggleSelection();
+		}
+
+		function togglegreenBg() {
+			greenBgApplier.toggleSelection();
+		}
+
+		window.onload = function () {
+			rangy.init();
+
+			// Enable buttons
+			var classApplierModule = rangy.modules.ClassApplier;
+
+			// Next line is pure paranoia: it will only return false if the browser has no support for ranges,
+			// selections or TextRanges. Even IE 5 would pass this test.
+			if (rangy.supported && classApplierModule && classApplierModule.supported) {
+				orangeBgApplier = rangy.createClassApplier("orangeBg", {
+					tagNames: ["span", "img"]
+				});
+
+				amareloBgApplier = rangy.createClassApplier("amareloBg", {
+					tagNames: ["span", "a", "b", "img"]
+				});
+
+				greenBgApplier = rangy.createClassApplier("greenBg", {
+					tagNames: ["span", "a", "b", "img"]
+				});
+
+				var toggleorangeBgButton = gEBI("toggleorangeBgButton");
+				toggleorangeBgButton.disabled = false;
+				toggleorangeBgButton.ontouchstart = toggleorangeBgButton.onmousedown = function () {
+					toggleorangeBg();
+					return false;
+				};
+
+				var toggleamareloBgButton = gEBI("toggleamareloBgButton");
+				toggleamareloBgButton.disabled = false;
+				toggleamareloBgButton.ontouchstart = toggleamareloBgButton.onmousedown = function () {
+					toggleamareloBg();
+					return false;
+				};
+
+				var togglegreenBgButton = gEBI("togglegreenBgButton");
+				togglegreenBgButton.disabled = false;
+				togglegreenBgButton.ontouchstart = togglegreenBgButton.onmousedown = function () {
+					togglegreenBg();
+					return false;
+				};
+			}
+		};
+	</script>
+
+	<style type="text/css">
+		*.amareloBg {
+			background-color: yellow;
+			color: #000;
+		}
+
+		*.orangeBg {
+			background-color: #e6791f;
+		}
+
+		img.orangeBg {
+			border: solid #e6791f 3px;
+		}
+
+		*.greenBg {
+			background-color: #6bb866;
+			color: #000;
+		}
+
+		.tooltipo.marcacao {
+			right: 200px;
+			bottom: 0px;
+		}
+	</style>
+
+	<style>
+		.ocutar {
+			display: none;
+		}
+	</style>
+
+
+	<style>
+		/* IMAGEM DESTAQUE E TEXTO */
+		.imagem1 {
+			background-image: url("images/img-mod1/cod04.jpg");
+		}
+
+		/* IMAGENS SLIDES */
+
+		.img1a {
+			background-image: url("images/img-mod1/slider-1a.jpg");
+			background-position: 50% 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.img1b {
+			background-image: url("images/img-mod1/slider-1b.jpg");
+			background-position: 50% 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		#constructor-modal .modal-dialog {
+			max-width: 95%;
+		}
+
+		@media (min-width: 768px) {
+			#constructor-modal .modal-dialog {
+				max-width: 60%;
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="css/opendyslexic.css">
+</head>
+
+<body class="body-home">
+	<!-- MARCA TEXTO -->
+	<div class="marcacao" id="buttons">
+		<div class="botoes">
+			<div class="tooltipo marcacao" style="background-color: #d7d7d7;">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+					<!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+					<path
+						d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
+				</svg>
+				<span class="tooltiptext">A ferramenta de marcação de texto online permite selecionar e destacar partes
+					de um
+					texto em uma página da web. Para usá-la, basta escolher uma cor de marcação e selecionar o texto a
+					ser
+					marcado. Para remover a marcação, basta clicar no primeiro botão para limpar a seleção. Ao clicar no
+					ícone de
+					pausar a ferramenta, todas as marcações ficarão invisíveis e nenhuma marcação nova será feita
+					enquanto o botão
+					estiver ativo.
+				</span>
+			</div>
+			<input type="button" disabled id="toggleorangeBgButton" value="" unselectable="on"
+				class="unselectable subBotoes">
+			<input type="button" disabled id="toggleamareloBgButton" value="" unselectable="on"
+				class="unselectable subBotoes">
+			<input type="button" disabled id="togglegreenBgButton" value="" unselectable="on"
+				class="unselectable subBotoes">
+		</div>
+		<div class="botao-menu">
+			<button id="toggleBtn" onclick="abreMarcaTexto()"><svg xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 576 512">
+					<!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+					<path
+						d="M315 315l158.4-215L444.1 70.6 229 229 315 315zm-187 5l0 0V248.3c0-15.3 7.2-29.6 19.5-38.6L420.6 8.4C428 2.9 437 0 446.2 0c11.4 0 22.4 4.5 30.5 12.6l54.8 54.8c8.1 8.1 12.6 19 12.6 30.5c0 9.2-2.9 18.2-8.4 25.6L334.4 396.5c-9 12.3-23.4 19.5-38.6 19.5H224l-25.4 25.4c-12.5 12.5-32.8 12.5-45.3 0l-50.7-50.7c-12.5-12.5-12.5-32.8 0-45.3L128 320zM7 466.3l63-63 70.6 70.6-31 31c-4.5 4.5-10.6 7-17 7H24c-13.3 0-24-10.7-24-24v-4.7c0-6.4 2.5-12.5 7-17z" />
+				</svg></button>
+		</div>
+	</div>
+	<!-- MARCA TEXTO -->
+	<section class="highlight-target">
+		<div class="capa-modulo wf-section">
+			<div class="main-capa">
+				<div class="titulo">
+					<h4 class="modulo-titulo">Unidade 1 - Modelagem Preditiva</h4>
+
+					<!-- ================================================================ -->
+					<!-- ============== INCLUIR TÍTULO DO MÓDULO  ======================= -->
+					<!-- ================================================================ -->
+
+					<h1 class="heading"><strong class="bold-text-91">GOVERNANÇA DO DIREITO REGIME
+							PREVIDENCIÁRIO (RGPS E RPPS)</strong></h1>
+					<div class="linha-branca"></div>
+
+					<p class="heading-info" style="margin-top: 10px;" id="">
+						<b>Autora:</b> Prof.ª Dra. Vivian Fiori<br>
+						<b>Revisão textual:</b> Maria Thereza Carvalho Rodriguez Guisande
+					</p>
+
+					<a href="#animated-arrow-target" id="animated-arrow"
+						data-w-id="7d80a05a-3461-8a45-d9ea-7e7bbfb45f19"
+						style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+						class="setaa w-inline-block"><img src="images/arrow-whitte.png" loading="lazy"
+							data-w-id="19b31c16-65ed-b662-9fc2-141051a748aa"
+							sizes="(max-width: 1279px) 40px, (max-width: 1439px) 3vw, 40px"
+							srcset="images/arrow-whitte-p-500.png 500w, images/arrow-whitte.png 512w" alt=""></a>
+				</div>
+			</div>
+			<div class="img-capa bg-img-capa"></div>
+			<div id="animated-arrow-target" class="animated-arrow-target"></div>
+		</div>
+
+
+
+
+		<div class="bg-final1">
+			<div class="c-p-cons">
+				<h2 class="heading-sintese">Objetivos da Unidade</h2>
+				<div class="linha-branca linha-br linha-sintese"></div>
+				<ul role="list1" class="bullet-conteudo">
+					<li class="list-item1">Desenvolver habilidade técnica de análise e modelagem preditiva voltada para
+						a solução de problemas;</li>
+					<li class="list-item1">Levantamento de dados e análise deles para tomadas de decisões estratégicas;
+					</li>
+				</ul>
+				<br><br><br>
+			</div>
+		</div>
+
+		<center>
+
+			<div class="bg-final3">
+				<h2 class="heading-sintese" style="width:58%;">Videoaula</h2>
+				<div class="linha-branca linha-br"></div> <br> <br>
+				<div>
+					<div class="video-container">
+						<div id="kaltura_player_245348628" style="width: 1024px;height: 576px">
+						</div>
+
+						<script type="text/javascript"
+							src="https://cdnapisec.kaltura.com/p/1756931/embedPlaykitJs/uiconf_id/51054902"></script>
+
+						<script type="text/javascript">
+							try {
+								var kalturaPlayer = KalturaPlayer.setup({
+									targetId: "kaltura_player_245348628",
+									provider: {
+										partnerId: 1756931,
+										uiConfId: 51054902
+									}
+								});
+								kalturaPlayer.loadMedia({
+									entryId: '1_3mpztl0w'
+								});
+							} catch (e) {
+								console.error(e.message)
+							}
+						</script>
+					</div>
+					<br> <br> <br>
+				</div>
+			</div>
+
+		</center>
+
+
+		<div id="animated-arrow-target" class="content wf-section">
+			<div id="content-1">
+				<div class="bg-apresentacao">
+					<div class="box--fundo" style="padding-top: 80px; padding-bottom: 30px;">
+						<h1 class="titulo-conteudo-h1" style="margin-top: 10px;" id=""> INTRODUÇÃO </h1>
+						<p class="p-cont">Na primeira unidade da disciplina de Análise e Modelagem Preditiva,
+							abordaremos a importância da coleta e organização de dados para análise. Com o aumento da
+							disponibilidade de dados nos dias de hoje, é fundamental entender como coletá-los e
+							organizá-los de maneira eficiente para que possam ser analisados de forma precisa e útil.
+							Nesta unidade, vamos discutir técnicas para coleta de dados, tipos de dados, formatos de
+							arquivos e como armazenar e gerenciar grandes conjuntos de dados</p>
+
+						<h1 class="titulo-conteudo-h1" id="">O Ensino de Geografia e a Interdisciplinaridade</h1>
+						<p class="p-cont">
+							Também abordaremos as melhores práticas para garantir a qualidade e integridade dos dados,
+							além de técnicas para lidar com dados faltantes ou inconsistentes. Com um entendimento
+							sólido desses conceitos, você estará preparado para avançar para as próximas unidades, onde
+							aprenderá a aplicar técnicas de análise e modelagem preditiva para resolver problemas reais.
+						</p>
+						<p class="p-cont">
+							A coleta e organização de dados são etapas fundamentais em qualquer projeto de análise e
+							modelagem preditiva. Sem dados confiáveis e bem estruturados, é impossível extrair insights
+							úteis e precisos para tomada de decisão. A coleta de dados pode ser realizada de várias
+							maneiras, desde a extração de dados de bancos de dados existentes até a coleta de dados por
+							meio de pesquisas ou sensores.
+						</p>
+						<div class="box-atencao box-saibamais">
+							<div class="fundo-icon fundo-saibamais"><img src="images/saiba-mais-br_1saiba-mais-br.png"
+									loading="lazy" alt="" class="image-23"></div>
+							<div class="content-box-destaque box-content-1">
+								<h3 class="titulo-destaque titulo-saibamais">Saiba Mais</h3>
+								<div class="cont-box-p p-cont">
+									Serão apresentadas diversas técnicas para coletar e organizar dados, incluindo a
+									seleção das variáveis mais relevantes, a escolha da fonte de dados mais apropriada e
+									a limpeza e pré-processamento dos dados para garantir sua qualidade e consistência.
+									Além disso, serão abordados tópicos como bancos de dados relacionais, bancos de
+									dados não relacionais e linguagem SQL.
+									<div class="citacao-box p-saibamais">
+										<div class="citacao-icone-box citacao-icone-saibamais"></div>
+										<!--<img src='./images/base/aspas1.png' class='' alt='' />-->
+										<div data-w-id='4874a766-01d2-44cf-7618-ad2e77b839be' style='opacity:0'
+											class="p-citacao-text">
+											<p>De nada adianta afirmar que a interdisciplinaridade envolve integração de
+												educadores, interação de disciplinas etc., se não se explicita em que
+												consiste essa integração e de que modo essa interação é viabilizada.
+												Definições que exprimem intenções e não são suficientes para um trabalho
+												com resultados […] exigem procedimentos detalhados e coerentes que
+												atingem a estrutura lógica dos programas de ensino e pesquisa.
+												Igualmente, de nada adianta afirmar que a interdisciplinaridade reside
+												no diálogo entre conhecimentos, pois ela, antes de tudo é uma categoria
+												de ação.
+											</p>
+											<p class="fonte-citacao-box"><b>Fonte: A autora. (2023)</b></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-atencao box-saibamais">
+							<div class="fundo-icon fundo-saibamais"><img src="images/saiba-mais-br_1saiba-mais-br.png"
+									loading="lazy" alt="" class="image-23"></div>
+							<div class="content-box-destaque box-content-1">
+								<h3 class="titulo-destaque titulo-saibamais">Saiba Mais</h3>
+								<div class="cont-box-p p-cont">
+									O armazenamento e gerenciamento de grandes conjuntos de dados
+									também é uma consideração importante na análise e modelagem preditiva.
+									Com conjuntos de dados cada vez maiores, é importante escolher uma
+									estrutura de armazenamento que permita o acesso rápido e eficiente aos
+									dados. Além disso, o gerenciamento adequado dos dados pode incluir a
+									segurança e o controle de acesso para proteger informações sensíveis.
+									Por fim, nesta unidade, discutiremos as melhores práticas para garantir a
+									qualidade e integridade dos dados, incluindo técnicas para lidar com dados
+									faltantes ou inconsistentes. Essas habilidades são essenciais para qualquer
+									profissional que trabalhe com análise e modelagem preditiva, e serão a
+									base para as técnicas que você aprenderá nas próximas unidades.
+									<p class="fonte-citacao-box"><b>Como define Fazenda (2015, p. 26), <strong>a
+												interdisciplinaridade:</strong></b></p>
+									<div class="citacao-box p-saibamais">
+										<div class="citacao-icone-box citacao-icone-saibamais"></div>
+										<!--<img src='./images/base/aspas1.png' class='' alt='' />-->
+										<div data-w-id='4874a766-01d2-44cf-7618-ad2e77b839be' style='opacity:0'
+											class="p-citacao-text">
+											<p>Artigo 5º. Todos são iguais perante a lei, sem distinção de qualquer
+												natureza, garantindo-se aos brasileiros e aos estrangeiros residentes
+												no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à
+												segurança e à propriedade, nos termos seguintes. (BRASIL, 1988)
+											</p>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="p-cont">A primeira unidade da disciplina de Análise e Modelagem Preditiva tem como
+							objetivo fornecer uma introdução aos conceitos fundamentais dessa área. Você aprenderá sobre
+							os diferentes tipos de dados e sua importância na análise preditiva, além de como coletá-los
+							e organizá-los para análise.</p>
+
+						<p class="p-cont">Em seguida, discutiremos os principais métodos estatísticos e matemáticos
+							utilizados na análise preditiva, incluindo regressão linear, análise de séries
+							temporais e árvores de decisão. Você também aprenderá sobre a
+							importância da análise exploratória de dados na identificação de padrões e tendências
+							relevantes.</p>
+
+						<div data-w-id="9f4167f1-d83f-661a-8304-5a8660ad23b4" style="opacity:0" class="texto-destaque">
+							<p class="paragraph-179">Serão apresentadas diversas técnicas de modelagem, incluindo
+								regressão
+								linear e logística, análise discriminante, análise de séries temporais,
+								árvores de decisão, redes neurais e aprendizado de máquina. Além disso,
+								serão abordados tópicos como validação cruzada, seleção de modelos e
+								avaliação de desempenho.</p>
+						</div>
+
+						<p class="p-cont">Podemos, em atividades interdisciplinares, desenvolver diferentes tipos de
+							conteúdos, tais como:</p>
+
+						<div class="acordion-grande">
+							<div class="accordion-2">
+								<div class="accordion-wrapper">
+									<div class="accordion-item">
+										<div data-w-id="4874a766-01d2-44cf-7618-ad2e77b839cc" class="accordion-title-2">
+											<h2 class="titulo-accordion"><strong>criação de um repositório central de
+													dados mestre:</strong></h2><img src="images/arrow-branca-baixo.svg"
+												loading="lazy" width="30" alt="" class="seta-animada">
+										</div>
+										<div style="height:0px" class="acordion_content-2">
+											<div class="text-block-53">
+												<span class="text-span-13">o MDM cria um
+													repositório central de dados mestre, que é compartilhado em toda a
+													empresa e usado como fonte única de informações críticas;</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-wrapper">
+									<div class="accordion-item">
+										<div data-w-id="4874a766-01d2-44cf-7618-ad2e77b839db" class="accordion-title-2">
+											<h2 class="titulo-accordion"><strong>gerenciamento de versões e histórico de
+													dados:</strong></h2><img src="images/arrow-branca-baixo.svg"
+												loading="lazy" width="30" alt="" class="seta-animada">
+										</div>
+										<div style="height:0px" class="acordion_content-2">
+											<div class="text-block-53">
+												<span class="text-span-13">o MDM permite o
+													gerenciamento de versões e histórico de dados mestre, garantindo que
+													todas as mudanças sejam rastreadas e documentadas. Isso ajuda a
+													garantir a integridade e a precisão dos dados-mestre ao longo do
+													tempo;</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-wrapper">
+									<div class="accordion-item">
+										<div data-w-id="4874a766-01d2-44cf-7618-ad2e77b839ea" class="accordion-title-2">
+											<h2 class="titulo-accordion"><strong>controle de acesso e
+													segurança:</strong></h2><img src="images/arrow-branca-baixo.svg"
+												loading="lazy" width="30" alt="" class="seta-animada">
+										</div>
+										<div style="height:0px" class="acordion_content-2">
+											<div class="text-block-53">
+												<span class="text-span-13">o MDM permite o controle de acesso
+													e a segurança dos dados mestre, garantindo que apenas usuários
+													autorizados possam acessar e modificar os dados;</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-wrapper">
+									<div class="accordion-item">
+										<div data-w-id="4874a766-01d2-44cf-7618-ad2e77b839ea" class="accordion-title-2">
+											<h2 class="titulo-accordion"><strong>distribuição de dados para outros
+													sistemas:</strong></h2><img src="images/arrow-branca-baixo.svg"
+												loading="lazy" width="30" alt="" class="seta-animada">
+										</div>
+										<div style="height:0px" class="acordion_content-2">
+											<div class="text-block-53">
+												<span class="text-span-13">o MDM permite a
+													distribuição de dados mestre para outros sistemas e aplicativos da
+													empresa, garantindo que as informações críticas estejam disponíveis
+													em
+													tempo real para todos os processos de negócio;</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<p class="p-cont">Serão apresentadas diversas técnicas para coletar e organizar dados,
+							incluindo a seleção das variáveis mais relevantes, a escolha da fonte de dados
+							mais apropriada e a limpeza e pré-processamento dos dados para garantir sua
+							qualidade e consistência. Além disso, serão abordados tópicos como bancos
+							de dados relacionais, bancos de dados não relacionais e linguagem SQL.</p>
+
+						<div class="box-atencao box-glossario">
+							<div data-w-id="76ec7998-2f35-1f17-a100-7092b97502f8" class="fundo-icon fundo-glossario">
+								<img src="images/glossario_b.png" loading="lazy" alt="" class="image-23">
+							</div>
+							<div class="content-box-destaque box-content-1">
+								<h3 class="titulo-destaque titulo-glossario">Glossário</h3>
+								<div class="cont-box-p p-cont">
+									<p>Serão apresentadas diversas técnicas de modelagem, incluindo
+										regressão linear e logística, análise discriminante, análise de séries
+										temporais,
+										árvores de decisão, redes neurais e aprendizado de máquina. Além disso,
+										serão abordados tópicos como validação cruzada, seleção de modelos e
+										avaliação de desempenho.
+									</p>
+									<div class="citacao-box p-glossario">
+										<div class="citacao-icone-box citacao-icone-glossario"></div>
+										<!--<img src='./images/base/aspas1.png' class='' alt='' />-->
+										<div data-w-id='4874a766-01d2-44cf-7618-ad2e77b839be' style='opacity:0'
+											class="p-citacao-text">
+											<p class="fonte-citacao-box"><b>Como explica Zabala (2014, p. 69):</b></p>
+											<p>A Declaração dos Direitos do Homem, em 1789, defendeu a ideia de
+												que o Estado deveria oferecer um sistema de Seguridade Social aos
+												cidadãos, o que contribuiu para aprimorar o contexto de convivência
+												em sociedade e para enfatizar a necessidade da solidariedade
+												coletiva.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<p class="p-cont">
+							É importante destacar a diferença entre Seguro e Assistência Social: enquanto o seguro
+							garante o direito à reparação, a assistência é uma intervenção que busca proteger o ser
+							humano independentemente de sua contribuição. A Primeira Guerra Mundial e a Revolução
+							Soviética foram eventos que impulsionaram a necessidade de intervenção Estatal na proteção
+							dos direitos dos indivíduos. Após a Segunda Guerra Mundial, tornou-se clara a necessidade de
+							uma intervenção Estatal de cunho social e econômico.
+						</p>
+
+						<div class="box-img">
+							<img src="images/img-mod1/MEGEMédio_UNI01_01.png" data-lity loading="lazy" style="opacity:0"
+								data-w-id="4874a766-01d2-44cf-7618-ad2e77b83a0a"
+								alt="#ParaTodosVerem: nesse esquema, há uma sequência de etapas apresentadas em retângulos e setas, com a seguinte sequência: definição dos objetivos da ação interdisciplinar; os tipos de conteúdos; as metodologias e as estratégias usadas; o cronograma das atividades e da execução; e, por fim, as formas de avaliação das atividades. Fim da descrição."
+								title="#ParaTodosVerem: nesse esquema, há uma sequência de etapas apresentadas em retângulos e setas, com a seguinte sequência: definição dos objetivos da ação interdisciplinar; os tipos de conteúdos; as metodologias e as estratégias usadas; o cronograma das atividades e da execução; e, por fim, as formas de avaliação das atividades. Fim da descrição."
+								class="image-24">
+
+							<p class="elemento-acessibilidade"></p>
+							<p class="p-cont-font  ct-smaller">
+								<b>Figura 1 - </b>Etapas do planejamento interdisciplinar<br>
+							</p>
+							<p class="p-cont-font ct-smaller"><span class="pratodosverem"><b>#ParaTodosVerem:
+									</b></span>nesse esquema, há uma sequência de etapas apresentadas em retângulos e
+								setas, com a seguinte sequência: definição dos objetivos da ação interdisciplinar; os
+								tipos de conteúdos; as metodologias e as estratégias usadas; o cronograma das atividades
+								e da execução; e, por fim, as formas de avaliação das atividades. Fim da descrição.</p>
+						</div>
+
+						<p class="p-cont">
+							Conforme afirmado por Neto (2021), a noção de governança em organizações não é uma novidade
+							e se desenvolveu ao longo de quatro séculos de evolução humana. Em seus estudos, Andrade e
+							Rosseti (2012) explicam seis processos históricos que culminaram no surgimento da Governança
+							Corporativa. Atualmente, em um contexto em que a quantidade de informações geradas e
+							coletadas pelas empresas cresce exponencialmente, a governança de dados tornou-se cada vez
+							mais relevante. Abaixo, apresentamos algumas razões que ilustram a importância da Governança
+							de Dados para as empresas.
+						</p>
+
+
+						<h1 class="titulo-conteudo-h1" id="">As Propostas dos Parâmetros Curriculares Nacionais de
+							Geografia para o Ensino Médio</h1>
+
+						<p class="p-cont">A análise e modelagem preditiva têm se mostrado ferramentas
+							poderosas para resolver problemas do mundo real em diversas áreas, desde a
+							medicina até a economia. Essas técnicas permitem que sejam feitas previsões
+							precisas a partir de dados históricos, identificando tendências e padrões que
+							podem ser utilizados para tomar decisões estratégicas.</p>
+						<p class="p-cont">A primeira unidade da disciplina de Análise e Modelagem Preditiva tem
+							como objetivo fornecer uma introdução aos conceitos fundamentais dessa
+							área. Você aprenderá sobre os diferentes tipos de dados e sua importância na
+							análise preditiva, além de como coletá-los e organizá-los para análise.</p>
+						<p class="p-cont">Em seguida, discutiremos os principais métodos estatísticos e
+							matemáticos utilizados na análise preditiva, incluindo regressão linear, análise
+							de séries temporais e árvores de decisão. Você também aprenderá sobre a
+							importância da análise exploratória de dados na identificação de padrões e
+							tendências relevantes.</p>
+
+						<div class="p-citacao">
+							<div class="citacao-icone"></div>
+							<!--<img src='./images/base/aspas1.png' class='' alt='' />-->
+							<div data-w-id='4874a766-01d2-44cf-7618-ad2e77b839be' style='opacity:0'
+								class="p-citacao-text">
+								<p>A busca por uma sensibilidade estética que transcende a
+									padronização e estimula a criatividade e o espírito inventivo está
+									presente tanto no processo de adquirir conhecimento quanto na
+									capacidade de colocá-lo em prática. Esses dois momentos são
+									intrinsecamente ligados, superando a falsa dicotomia entre teoria e
+									prática. A política da igualdade, que consagra o Estado de Direito e a
+									democracia, se manifesta na habilidade de conviver e na construção
+									de uma sociedade solidária por meio da cooperação, rejeitando o
+									individualismo. A ética da identidade, que surge diante do desafio de
+									uma educação voltada para a formação de identidades responsáveis
+									e solidárias, comprometidas com a inserção no tempo e no espaço,
+									requer o desenvolvimento da habilidade de ser. Essa busca pelo
+									aprendizado integral não se limita à mera transmissão de
+									conhecimentos prontos, mas se torna o objetivo máximo da ação
+									educativa.
+								</p>
+								<p>Observa-se que, além do aprender a conhecer, do aprender a fazer (que requer a
+									aquisição de habilidades) e do aprender a conviver (que necessita de
+								</p>
+							</div>
+						</div>
+
+						<div class="box-atencao box-entendaconceito">
+							<div data-w-id="76ec7998-2f35-1f17-a100-7092b97502f8"
+								class="fundo-icon fundo-entendaconceito"><img
+									src="images/entenda-conceito-br_1entenda-conceito-br.png" loading="lazy" alt=""
+									class="image-23">
+							</div>
+							<div class="content-box-destaque box-content-1">
+								<h3 class="titulo-destaque titulo-entenda">Livro</h3>
+								<div class="cont-box-p p-cont"> Nunca desista diante das adversidades, pois as
+									conquistas não são alcançadas em um único passo ou em um caminho linear. É essencial
+									buscar forças internas para enfrentar os desafios e acreditar em si mesmo, mesmo
+									quando as circunstâncias parecem difíceis. Tenha a determinação de reagir diante das
+									adversidades e busque extrair aprendizados valiosos dessas situações.<b> É na
+										resiliência diante das dificuldades que encontramos a capacidade de superação e
+										crescimento pessoal.</b>
+								</div>
+							</div>
+						</div>
+
+						<p class="p-cont">No PCN (Parâmetros Curriculares Nacionais) do ensino médio das
+							Ciências Humanas, é proposta a construção de conhecimentos compartilhados
+							e integrados entre as diversas disciplinas da área, em vez de fragmentá-los em
+							conhecimentos disciplinares isolados. Além disso, é destacada a importância
+							de discutir, nesse nível de ensino, o papel das tecnologias e das técnicas na
+							gestão do espaço na produção e no cotidiano das pessoas, especialmente
+							considerando a revolução técnico-científica ocorrida no final do século XX.</p>
+						<p class="p-cont">Entre as competências elencadas no PCN de Ciências Humanas para o ensino
+							médio, podemos mencionar:</p>
+
+						<div class="sanfona-menor">
+							<div class="questin-drop">
+								<div data-w-id="87d77ff1-09ed-d364-f470-d04303540789" class="dropdown-question">
+									<div class="drop-button">
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-h-5"></div>
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-v-5"></div>
+									</div>
+									<div class="button-down-2">
+										<div class="text-block-4"><strong class="bold-text-83">1</strong></div>
+									</div>
+								</div>
+								<div style="height:0px" class="dropdown-content-answer-5">
+									<div class="block-text">
+										<p class="paragraph-answer">Compreender e analisar criticamente os processos
+											históricos, sociais, políticos, culturais e econômicos, considerando
+											diferentes perspectivas teóricas e fontes de informação.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="questin-drop">
+								<div data-w-id="87d77ff1-09ed-d364-f470-d04303540796" class="dropdown-question">
+									<div class="drop-button">
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-h-5"></div>
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-v-5"></div>
+									</div>
+									<div class="button-down-2">
+										<div class="text-block-4"><strong class="bold-text-83">2</strong></div>
+									</div>
+								</div>
+								<div style="height:0px" class="dropdown-content-answer-5">
+									<div class="block-text">
+										<p class="paragraph-answer">Identificar, problematizar e analisar questões
+											contemporâneas relevantes, relacionadas aos direitos humanos, à diversidade
+											cultural, ao desenvolvimento sustentável, à cidadania e à participação
+											social.</p>
+									</div>
+								</div>
+							</div>
+							<div class="questin-drop">
+								<div data-w-id="87d77ff1-09ed-d364-f470-d043035407a3" class="dropdown-question">
+									<div class="drop-button">
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-h-5"></div>
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-v-5"></div>
+									</div>
+									<div class="button-down-2">
+										<div class="text-block-4"><strong class="bold-text-83">3</strong>
+										</div>
+									</div>
+								</div>
+								<div style="height:0px" class="dropdown-content-answer-5">
+									<div class="block-text">
+										<p class="paragraph-answer">Utilizar conceitos, teorias e métodos das Ciências
+											Humanas para
+											interpretar e explicar fenômenos sociais, culturais, políticos e
+											econômicos, relacionando-os com a realidade.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="questin-drop">
+								<div data-w-id="87d77ff1-09ed-d364-f470-d043035407a3" class="dropdown-question">
+									<div class="drop-button">
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-h-5"></div>
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-v-5"></div>
+									</div>
+									<div class="button-down-2">
+										<div class="text-block-4"><strong class="bold-text-83">4</strong>
+										</div>
+									</div>
+								</div>
+								<div style="height:0px" class="dropdown-content-answer-5">
+									<div class="block-text">
+										<p class="paragraph-answer">Exercitar o diálogo e o respeito às diferentes
+											opiniões e visões de mundo, promovendo a tolerância, a empatia e o
+											entendimento intercultural.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="questin-drop">
+								<div data-w-id="87d77ff1-09ed-d364-f470-d043035407a3" class="dropdown-question">
+									<div class="drop-button">
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-h-5"></div>
+										<div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+											class="drop-button-v-5"></div>
+									</div>
+									<div class="button-down-2">
+										<div class="text-block-4"><strong class="bold-text-83">5</strong>
+										</div>
+									</div>
+								</div>
+								<div style="height:0px" class="dropdown-content-answer-5">
+									<div class="block-text">
+										<p class="paragraph-answer">Aplicar os conhecimentos adquiridos em situações
+											práticas, buscando soluções criativas e contextualizadas para problemas
+											sociais e individuais.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<p class="p-cont">O protagonismo é alcançado quando os alunos desenvolvem habilidades de
+							pesquisa, reflexão, argumentação fundamentada e senso crítico. Eles aprendem a discernir
+							informações confiáveis, evitando a propagação de <b>"fake news"</b>, e compreendem sua
+							realidade socioespacial e o mundo em que vivem. Isso os capacita a fazer escolhas
+							informadas, a lutar por um mundo melhor e a não se alienarem de sua realidade e da realidade
+							dos outros.</p>
+
+						<p class="p-cont">Os conceitos a serem desenvolvidos pelas disciplinas de Ciências Humanas no
+							ensino médio, propostos pela BNCC (Base Nacional Comum Curricular), estão
+							descritos na Figura 4.</p>
+
+						<p class="p-cont">O cálculo da densidade populacional envolve uma série de observações e
+							medidas, como o número de indivíduos avistados, o tamanho da área de
+							estudo e o tempo de observação. Com base nessas informações, é possível
+							estimar o número total de indivíduos na população e, consequentemente,
+							calcular a densidade populacional, que representa a quantidade de indivíduos
+							por unidade de área.</p>
+
+						<p class="p-cont">Para realizar esse cálculo, é necessário empregar fórmulas matemáticas e
+							estatísticas, como a equação de captura-recaptura, que estima o tamanho da
+							população de animais a partir do número de indivíduos marcados e
+							recapturados em uma área de estudo.</p>
+
+						<p class="p-cont">Além disso, é importante utilizar outras técnicas para garantir a precisão do
+							cálculo da densidade populacional, como o uso de armadilhas fotográficas e
+							dispositivos de monitoramento remoto, que permitem a observação não
+							invasiva dos animais e fornecem dados mais precisos sobre sua distribuição e
+							comportamento.</p>
+						<p class="p-cont">Embora a fórmula exata para a equação de captura-recaptura seja um pouco
+							mais complexa e envolva variáveis e cálculos estatísticos, uma versão
+							simplificada da fórmula é a seguinte:</p>
+
+						<center> `sqrt(12) \Sigma_{1}^{3} 2(20^{1})5 sin sin 2 .` </center>
+
+						<p class="p-cont">onde:</p>
+						<ul role="list" class="bullet-conteudo">
+							<li class="list-item">N é o tamanho total da população;</li>
+							<li class="list-item">M é o número de indivíduos marcados na primeira etapa;</li>
+							<li class="list-item">C é o número total de indivíduos capturados na segunda etapa;</li>
+							<li class="list-item">R é o número de indivíduos recapturados na segunda etapa que foram
+								marcados na
+								primeira etapa.</li>
+						</ul>
+
+						<div class="video-destaque">
+							<div class="box-video-left">
+								<div class="box-img-video"><img
+										src="https://uploads-ssl.webflow.com/610d6c929ae0c193176ccad0/610d6c929ae0c173ae6ccb06_video-br.png"
+										loading="lazy" alt="" class="image-26"></div>
+								<h1 data-w-id="4874a766-01d2-44cf-7618-ad2e77b83979" style="opacity:0"
+									class="titulo-destaque h3-video">
+									Vídeo</h1>
+								<div class="linha-branca linha-content"></div>
+								<p data-w-id="4874a766-01d2-44cf-7618-ad2e77b8397c" style="opacity:0"
+									class="p-cont branco-p">Confira o vídeo sobre curiosidades<br></p>
+							</div>
+							<div class="box-video-right">
+								<div data-w-id="4874a766-01d2-44cf-7618-ad2e77b83980" style="opacity:0"
+									class="video-width video-cont-int">
+									<div class="video">
+										<div style="padding-top:56.17021276595745%" class="video-2 w-video w-embed">
+											<iframe src="https://www.youtube.com/embed/XQdzHcjQusI"
+												title="YouTube video player" frameborder="0"
+												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+												allowfullscreen></iframe></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div data-w-id="9f4167f1-d83f-661a-8304-5a8660ad23b4" style="opacity:0" class="texto-destaque">
+							<p class="paragraph-179">Os Parâmetros Curriculares Nacionais (PCNs) estabelecem que os
+								conceitos de "globalização", "redes" e "técnicas" devem ser abordados no ensino médio.
+								Esses conceitos têm como objetivo demonstrar como o processo de globalização e as novas
+								tecnologias de informação e produção têm impacto nas formas de vida cotidiana, no
+								trabalho, nas relações sociais e na produção e circulação de mercadorias.</p>
+						</div>
+
+						<p class="p-cont">Por meio do estudo desses conceitos, os alunos são convidados a compreender
+							como a globalização afeta o mundo contemporâneo, conectando pessoas, culturas e economias em
+							uma escala global. Eles também exploram as redes de comunicação e interação que surgem com o
+							avanço tecnológico, como a internet e as redes sociais, e como essas redes influenciam a
+							forma como nos comunicamos, compartilhamos informações e interagimos em sociedade.</p>
+						<p class="p-cont">Além disso, os alunos são introduzidos às técnicas modernas de produção e
+							informação, que transformam os processos de trabalho, a organização social e a circulação de
+							produtos. Essas técnicas incluem avanços tecnológicos, automação, produção em larga escala e
+							logística global, que têm um papel fundamental na economia contemporânea.</p>
+						<p class="p-cont">Ao compreenderem esses conceitos, os estudantes desenvolvem uma visão crítica
+							e reflexiva sobre as transformações sociais, econômicas e culturais decorrentes da
+							globalização e das novas tecnologias. Eles são incentivados a analisar os impactos dessas
+							mudanças em suas vidas e na sociedade em geral, promovendo uma compreensão mais ampla do
+							mundo contemporâneo citamos algumas no Quadro 1 a seguir.</p>
+
+						<p class="fonte-elemento1">
+							<b>Quadro 1 - </b>Perspectivas, competências e habilidade do ensino de Geografia
+						</p>
+
+						<div class="table-content">
+							<table class="table-default">
+								<thead>
+									<tr>
+										<th>Perspectivas</th>
+										<th class="th-border-blue">Competências e Habilidades</th>
+									</tr>
+								</thead>
+								<tr>
+									<td>Representação e comunicação</td>
+									<td>
+										<ul role="list" class="bullet-conteudo">
+											<li class="list-item">Saber ler e interpretar mapas, gráficos e tabelas,
+												considerando os fenômenos geográficos em diversas escalas cartográficas
+												e geográficas (local, regional, nacional e global).</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>Investigação e compreensão</td>
+									<td>
+										<ul role="list" class="bullet-conteudo">
+											<li class="list-item">Compreender os aspectos geográficos comparando-os a
+												diferentes tempos, situações e lugares mediante os conceitos-chaves da
+												Geografia (paisagem, território, região e lugar).
+											</li>
+											<li class="list-item">Analisar as transformações espaciais e territoriais no
+												mundo e no Brasil, com a inserção de novas técnicas e tecnologias no
+												trabalho, na produção e no cotidiano;
+											</li>
+											<li class="list-item">Compreender as transformações da natureza empreendidas
+												pela dinâmica natural e pela dinâmica socialmente produzida em
+												diferentes escalas geográficas
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>Contexto sociocultural</td>
+									<td>
+										<ul role="list" class="bullet-conteudo">
+											<li class="list-item">Considerar e reconhecer as diferentes práticas sociais e culturais ao longo do tempo e em diferentes escalas
+											</li>
+											<li class="list-item">Analisar as transformações socioculturais no mundo e em diversas escalas geográficas.
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+
+						<div class="conteudo-interno">
+							<h1 class="heading-2 apresentacao-rosa">Material complementar</h1>
+							<div class="linha-branca linha-red"></div>
+
+							<!-- INÍCIO -->
+							<div class="leitura" style="margin-left: -1.5% ;">
+								<p class="heading-5" style="color: #123473;">
+									<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+										loading="lazy" width="40" class="videos-icone" style="border: 0px; outline: 0px;">
+									Vídeos
+								</p>
+	
+								<br>
+							</div>
+	
+							<div class="p-citacao">
+								<div data-w-id='4874a766-01d2-44cf-7618-ad2e77b839be' style='color:#000000 ;'
+									class="p-citacao-text1">
+									<p class="refb">
+										Geografia na BNCC,
+										<b>BNCC e o Ensino da Geografia:</b>
+										Mudaram as Normas, mas Permaneceram os Currículos
+									</p>
+									<p> 
+										<b>
+											<a href="https://youtu.be/84Pc1Vk-750" target="blank" class="a-link">Clique aqui para acessar
+											</a>
+										</b>
+									</p>
+								</div>
+							</div>
+							<!-- FINAL -->
+
+							<!-- INÍCIO -->
+	
+							<div class="leitura" style="margin-left: -1.5% ;">
+								<p class="heading-5" style="color: #123473;">
+									<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy" width="40" class="leituras-icone">
+									Leituras
+								</p>
+								<br>
+							</div>
+	
+							<div class="p-citacao">
+								<div data-w-id='4874a766-01d2-44cf-7618-ad2e77b839be' class="p-citacao-text1">
+									<p class="refb">Novo Ensino Médio 2022: Entenda Tudo que Muda. <b>“Políticas de Currículo para o Ensino de Geografia: uma Leitura a Partir dos PCN para o Ensino Médio”</b>.Nesse artigo, os autores analisam as características das propostas dos PCN para Ciências Humanas, dando ênfase à Geografia.
+									</p>
+									<p> 
+										<b>
+											<a href="https://bit.ly/3W4DnfC" target="blank" class="a-link">
+												Clique aqui para acessar
+											</a>
+										</b>
+									</p>
+								</div>
+							</div>
+							<!-- FINAL -->
+						</div>
+						<div class="referencias">
+
+							<h1 class="heading-2 apresentacao-rosa">Referências</h1>
+							<div class="linha-branca linha-red"></div>
+
+							<div class="content-internal">
+
+								<p class="p-cont">
+									BRASIL. Ministério da Educação.
+									<b>Base Nacional Comum Curricular:</b>
+									educação é a base. 1 ed. Brasília: Ministério da Educação, 2018. Disponível em: &lt;http://basenacionalcomum.mec.gov.br/&gt;. Acesso em: 28/01/2023.
+								</p>
+
+								<p class="p-cont">
+									BRASIL. Ministério da Educação.
+									<b>Parâmetros Curriculares Nacionais –</b>
+									ensino médio (parte IV). Brasília: MEC, 2000. &lt;http://portal.mec.gov.br/seb/arquivos/pdf/cienciah.pdf&gt;. Disponívelem: Acessoem: 28/01/2023.
+								</p>
+
+								<p class="p-cont">
+									BRASIL.
+									<b>Orientações curriculares para o ensino médio:</b>
+									Ciências Humanas e suas Tecnologias. Brasília: Ministério da Educação, Secretaria de Educação Básica, 2006. v. 3. Disponível em​: &lt;http://portal.mec.gov.br/seb/arquivos/pdf/book_volume_03_internet.pdf&gt;. Acesso em: 28/01/2023.
+								</p>
+
+								<p class="p-cont">
+									BRASIL.
+									<b>PCN + Ensino Médio:</b>
+									orientações educacionais complementares aos parâmetros curriculares nacionais – Ciências Humanas e suas Tecnologias. Brasília: MEC/SEMTEC, 2002. Disponível em: &lt;http://portal.mec.gov.br/seb/arquivos/pdf/CienciasHumanas.pdf&gt;. Acesso em: 28/01/2023.
+								</p>
+
+								<p class="p-cont">
+									FAZENDA, I. (org.).
+									<b>Didática e interdisciplinaridade.</b>
+									17. ed. Campinas: Papirus, 2015.
+								</p>
+
+								<p class="p-cont">
+									PAVIANI, J.
+									<b>Interdisciplinaridade:</b>
+									conceito e distinções. 2. ed. Caxias do Sul: EDUCS, 2008.
+								</p>
+
+								<p class="p-cont">
+									ZABALA, A.
+									<b>A prática educativa:</b>
+									como ensinar. 2. ed. Porto Alegre: Penso, 2014.
+								</p>
+							</div>
+						</div>
+	</section>
+	<!-- sessão pdf -->
+	<div class="bg-final4">
+		<div class="content-bg-final4">
+			<div class="content-text">
+				<div class="content-img-pdf"></div>
+				<h3 class="heading-sintese2">Muito bem, estudante!</h3>
+				<div class="linha-branca2"></div>
+				<p class="p-white">
+					Você chegou ao final desta Unidade. Parabéns! É hora de testar os conhecimentos adquiridos: volte ao
+					Ambiente Virtual de Aprendizagem para acessar as Atividades.
+				</p>
+
+				<p style=" width: 63%;" class="p-white">
+					Se preferir estudar de maneira <i>off-line</i>, faça o <i>download</i> do conteúdo desta Unidade a
+					seguir.
+				</p>
+			</div>
+			<div class="content-img-pdf-responsive"></div>
+		</div>
+		<div class="content-button">
+			<a class="print-pdf" href="https://clientes.livioadapt.com.br/crzsul/cosmetologia/pdf/unidade4.pdf"
+				target="blank"><b><i class="bi bi-download"></i> Versão
+					Impressa</b></a>
+		</div>
+	</div>
+	<!-- sessão pdf -->
+
+	<!--MENU DO TOPO -->
+	<div class="nav wf-section">
+		<div class="menu">
+			<div class="main-menu">
+				<div class="logo"><img src="images/logo-clean.png" loading="lazy" alt="" class="imagem-logo"
+						style="width: 55%;"></div>
+				<div class="titulo-cursoi"><span class="titulo-curso-int">Galeria de Recursos</span></div>
+				<div class="dropdown-trigger h1-tiulo">
+					<div style="background-color:rgb(255,255,255)" class="div-block mein"></div>
+					<div style="background-color:rgb(255,255,255)" class="div-block mein"></div>
+					<div style="background-color:rgb(255,255,255)" class="div-block mein"></div>
+				</div>
+				<div style="opacity:0;display:none" class="nav-menu">
+					<div class="accordion" id="accordionExample">
+						<div class="div-block-3">
+							<a href="https://clientes.livioadapt.com.br/crzsul/cosmetologia/pdf/unidade4.pdf"
+								target="blank" class="botao-google div-block-4"><i class="bi bi-download"></i> Versão
+								Impressa</a>
+							<div class="div-block-4">Acessibilidade</div>
+							<div class="text-acess">
+								<div class="acess-font">Fonte:</div>
+								<div class="acess-font-2">Contraste:</div>
+							</div>
+							<div class="div-block-5">
+								<div class="bt-font">
+									<div id="a_mais" class="bt-font-am">
+										<div class="text-block-3">Aa</div><img src="images/plus.svg" loading="lazy"
+											alt="" class="image-20">
+									</div>
+									<div id="a_menos" class="bt-font-am">
+										<div class="text-block-3">Aa</div><img src="images/menos.svg" loading="lazy"
+											alt="" class="image-20">
+									</div>
+									<div id="a_reset" class="bt-font-am">
+										<div class="text-block-3">Aa</div><img src="images/reset.svg" loading="lazy"
+											alt="" class="image-20 reset-bt">
+									</div>
+								</div>
+								<div class="div-block-6">
+									<div class="div-block-7">
+										<div class="icon-a"><img src="images/icon-contraste.png " loading="lazy" alt=""
+												class="image-21 moon">
+											<a href="#" class="toogle-switch w-inline-block" data-id="moon">
+												<div class="toogle-switch-before"></div>
+												<div class="toogle-switch-checked"></div>
+											</a>
+										</div>
+									</div>
+									<div class="div-block-7">
+										<div class="icon-a"><img src="images/moon.svg" loading="lazy" alt=""
+												class="image-21">
+											<a href="#" class="toogle-switch w-inline-block" data-id="sun">
+												<div class="toogle-switch-before"></div>
+												<div onclick="changeImageBoxSite2()" class="toogle-switch-checked">
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="div-block-3 col-accessibility container-functionalities">
+							<!--
+              <h3>
+                  <img src="./images/icon-acessibilidade.png" alt="Ícone acessibilidade"/>
+                  Acessibilidade
+              </h3>
+              -->
+
+							<ul class="access-options">
+								<li class="access-options-li option-extra">
+									<div><img src="./images/icon-libras.png" alt="Ícone libras" />Libras</div>
+									<div class="access-options-toggle">
+										<div class="flag-toogle-switch" data-function="libras"></div>
+									</div>
+								</li>
+								<li class="access-options-li">
+									<div><img src="./images/icon-dislexia.png" alt="Ícone dislexia" />Dislexia</div>
+									<div class="access-options-toggle">
+										<div class="flag-toogle-switch" data-function="dislexia"></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-bar-progress">
+				<div class="progress-container">
+					<div class="progress-bar" id="myBar"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/MENU DO TOPO -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="constructor-modal" tabindex="-1" aria-labelledby="construtoresModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<img src="images/img-mod1/construtor-modal.png" loading="lazy" class="w-100" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="./vendor/lity/js/lity.min.js"></script>
+	<script src="./vendor/texthighlighter/js/TextHighlighter.min.js"></script>
+
+	<script src="js/webflow.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+	</script>
+
+
+
+	<div vw id="js-btn-libras" class="enabled" style="display: none;">
+		<div vw-access-button class="active"></div>
+		<div vw-plugin-wrapper>
+			<div class="vw-plugin-top-wrapper"></div>
+		</div>
+	</div>
+
+
+	<!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+	<!-- nps -->
+	<script>
+		function saveScoreToLocalStorage(key, value) {
+			localStorage.setItem(key, value);
+		}
+
+		function saveComentarioToLocalStorage(Comentario) {
+			localStorage.setItem("Comentario", Comentario);
+		}
+
+		function loadScoreFromLocalStorage(key) {
+			return localStorage.getItem(key);
+		}
+
+		function loadComentarioFromLocalStorage() {
+			return localStorage.getItem("Comentario");
+		}
+
+		window.addEventListener("load", function () {
+			var cursoScoreInputs = document.getElementsByName("curso-score");
+			var overallExperience = document.getElementsByName("experiencia-geral");
+			var visualScoreInputs = document.getElementsByName("visual-score");
+			var ComentarioInput = document.getElementById("Comentario");
+
+			for (var i = 0; i < cursoScoreInputs.length; i++) {
+				cursoScoreInputs[i].addEventListener("click", function () {
+					saveScoreToLocalStorage("curso-score", this.value);
+				});
+
+				var savedCursoScore = loadScoreFromLocalStorage("curso-score");
+				if (savedCursoScore !== null && cursoScoreInputs[i].value === savedCursoScore) {
+					cursoScoreInputs[i].checked = true;
+				}
+			}
+
+			for (var i = 0; i < visualScoreInputs.length; i++) {
+				visualScoreInputs[i].addEventListener("click", function () {
+					saveScoreToLocalStorage("experiencia-geral", this.value);
+				});
+
+				var savedVisualScore = loadScoreFromLocalStorage("experiencia-geral");
+				if (savedVisualScore !== null && visualScoreInputs[i].value === savedVisualScore) {
+					visualScoreInputs[i].checked = true;
+				}
+			}
+
+			for (var i = 0; i < visualScoreInputs.length; i++) {
+				visualScoreInputs[i].addEventListener("click", function () {
+					saveScoreToLocalStorage("visual-score", this.value);
+				});
+
+				var savedVisualScore = loadScoreFromLocalStorage("visual-score");
+				if (savedVisualScore !== null && visualScoreInputs[i].value === savedVisualScore) {
+					visualScoreInputs[i].checked = true;
+				}
+			}
+
+			ComentarioInput.addEventListener("input", function () {
+				saveComentarioToLocalStorage(ComentarioInput.value);
+			});
+
+			var savedComentario = loadComentarioFromLocalStorage();
+			if (savedComentario !== null) {
+				ComentarioInput.value = savedComentario;
+			}
+		});
+	</script>
+
+	<!-- quiz -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+	<script type="module" src="./js/script-quiz.js" defer></script>
+	<script src="./js/script-chatbot.js"></script>
+	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+	<script type="text/javascript">
+		new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+		$(function () {
+			// $(window).on('load', function () {
+			document.getElementById("loading").style.display = "none";
+			document.getElementById("container-general").style.display = "block";
+
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			if (urlParams.has('pdf')) {
+				const isPDF = urlParams.get('pdf');
+				document.querySelector('body').classList.add('is-pdf');
+
+				if (isPDF == 'true') {
+					console.log('IS PDF');
+
+					document.querySelector('body').classList.add('is-pdf');
+
+					let element = document.querySelector('body');
+
+					const body = document.querySelector('body');
+					const loading = document.querySelector('#loading .content .blink');
+					const classIsPdf = 'is-pdf';
+
+					const timestamp = new Date().getTime();
+					const code = parseInt(Math.random() * (timestamp - 1) + 1);
+
+					const namePDF = 'adapt-ead-' + code + '.pdf';
+
+					let opt = {
+						margin: 0,
+						filename: namePDF,
+						image: {
+							type: 'jpeg',
+							quality: 0.98
+						},
+						html2canvas: {
+							scale: 2
+						},
+						jsPDF: {
+							unit: 'in',
+							format: 'A4',
+							orientation: 'portrait'
+						}
+					};
+
+
+					html2pdf().set(opt).from(element).toPdf().get('pdf').then(function (pdf) {
+						const url = pdf.output('bloburl');
+
+						window.location.href = url;
+					});
+				}
+			}
+
+			(function () {
+
+				$('.box').click(function () {
+					$(this).toggleClass('selected');
+				});
+
+				// var removeBtn = document.getElementById('remove');
+				let sandbox = document.getElementById('body');
+			})();
+
+			$(document).ready(function ($) {
+
+
+				// let element = document.querySelector('body');
+
+				//easy
+				//html2pdf().from(element).save();
+
+				//custom file name
+				//html2pdf().set({filename: 'code_with_mark_'+js.AutoCode()+'.pdf'}).from(element).save();
+
+
+				const btnPdf = document.querySelector('.btn-download-pdf');
+				btnPdf.addEventListener('click', (e) => {
+
+					// const strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes";
+					const URL = window.location + '?pdf=true';
+					// const win = window.open(URL, "_blank", strWindowFeatures);
+					const win = window.open(URL, "_blank");
+
+					// document.querySelector('body').classList.add('is-pdf');
+
+					// document.getElementById("loading").style.display = "block";
+					// document.getElementById("container-general").style.display = "none";
+
+					// document.getElementById("loading").style.display = "none";
+					// document.getElementById("container-general").style.display = "block";
+
+					// let elementContent = document.querySelector('#container-general');
+					// let elementFooter = document.querySelector('footer');
+					// let divContentPDF = document.createElement("div");
+					// divContentPDF.setAttribute('id', 'contentPDF');
+					// divContentPDF.append(elementContent.innerHTML);
+					// divContentPDF.append(elementFooter.innerHTML);
+					// document.querySelector('body').append(divContentPDF);
+					// let element = document.querySelector('#contentPDF');
+					// let element = document.querySelector('#container-general');
+
+					// setTimeout(function (){
+					//
+					//
+					// let element = document.querySelector('body');
+					//
+					//
+					// // element.classList.add('is-pdf');
+					// // document.querySelector('body').classList.add('is-pdf');
+					//
+					// const body = document.querySelector('body');
+					// const loading = document.querySelector('#loading .content .blink');
+					// const classIsPdf = 'is-pdf';
+					//
+					// const timestamp = new Date().getTime();
+					// const code = parseInt(Math.random() * (timestamp - 1) + 1);
+					//
+					// const namePDF = 'adapt-ead-' + code + '.pdf';
+					//
+					//
+					//
+					// //more custom settings
+					// let opt =
+					//     {
+					//         margin: 0,
+					//         filename: namePDF,
+					//         image: {type: 'jpeg', quality: 0.98},
+					//         html2canvas: {scale: 2},
+					//         jsPDF: {unit: 'in', format: 'A4', orientation: 'portrait'}
+					//     };
+					//
+					// const html2canvas = {
+					//     html2canvas: {
+					//         onclone: (element) => {
+					//             const svgElements = Array.from(element.querySelectorAll('svg'));
+					//             svgElements.forEach(s => {
+					//                 const bBox = s.getBBox();
+					//                 s.setAttribute("x", bBox.x);
+					//                 s.setAttribute("y", bBox.y);
+					//                 s.setAttribute("width", bBox.width);
+					//                 s.setAttribute("height", bBox.height);
+					//             });
+					//         }
+					//     }
+					// };
+
+					// html2pdf().from(element).toPdf().get('pdf').then(function (pdf) {
+					//     const url = pdf.output('bloburl');
+					// console.log('teste pdf 2');
+					// console.log(pdf);
+					// console.log(url);
+
+					// const strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes";
+					// window.open(url, '_blank', strWindowFeatures);
+					// window.location.href = url;
+					// });
+
+					// // New Promise-based usage:
+					// html2pdf().set(opt).from(element).save().then(
+					//     function (pdf) {
+					//
+					//         console.log('ok');
+					//
+					//     },
+					//     function(){
+					//
+					//         console.log('error');
+					//
+					//     }
+					// );
+					//     // html2pdf().set(opt).from(element).output();
+					//     // html2pdf().set(opt).from(element).set();
+					//     // html2pdf().set(opt).from(element).then();
+					// },5000);
+
+				});
+			});
+
+			$(function () {
+				$(window).on("load resize ", function () {
+					var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+					$('.tbl-header').css({
+						'padding-right': scrollWidth
+					});
+				}).resize();
+			});
+
+			// PROGRESSO MÓDULO
+			progressModules(1);
+
+		});
+	</script>
+</body>
+
+</html>

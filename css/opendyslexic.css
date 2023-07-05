@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'opendyslexic';
+    src: url('../fonts/opendyslexic/OpenDyslexic-Regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'opendyslexic';
+    src: url('../fonts/opendyslexic/OpenDyslexic-Italic.otf');
+    font-style: italic;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'opendyslexic';
+    src: url('../fonts/opendyslexic/OpenDyslexic-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'opendyslexic';
+    src: url('../fonts/opendyslexic/OpenDyslexic-BoldItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'opendyslexicmono';
+    src: url('../fonts/opendyslexic/OpenDyslexicMono-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --opendyslexic-chrome-sans: opendyslexic, Elusive-Icons, FontAwesome,
+    'Glyphicons Halflings', sans-serif, docons, 'AzureDevOpsMDL2Assets',
+    trellicons, 'Material Icons Extended', 'Bol Symbols', Graphik,
+    controlIcons, FontAwesome3;
+    --opendyslexic-chrome-mono: opendyslexicmono, Elusive-Icons, FontAwesome,
+    'Glyphicons Halflings', monospace, docons, 'AzureDevOpsMDL2Assets',
+    trellicons, 'Material Icons Extended', 'Bol Symbols', Graphik,
+    controlIcons, FontAwesome3;
+}
+
+html body.opendyslexic {
+    font-family: var(--opendyslexic-chrome-sans) !important;
+}
+
+html body.opendyslexic * {
+    font-family: var(--opendyslexic-chrome-sans) !important;
+}
+
+body.opendyslexic p:nth-child(even),
+body.opendyslexic li:nth-child(even) {
+    opacity: rgba(0, 0, 0, 0.03) !important;
+}
+
+body.opendyslexic p:hover,
+body.opendyslexic li:hover {
+    background-color: rgba(0, 0, 0, 0.09) !important;
+}
+
+body.opendyslexic p,
+body.opendyslexic a,
+body.opendyslexic h1,
+body.opendyslexic h2,
+body.opendyslexic h3,
+body.opendyslexic h4,
+body.opendyslexic h5,
+body.opendyslexic input,
+/*body.opendyslexic ul,*/
+body.opendyslexic span,
+body.opendyslexic font,
+body.opendyslexic strong,
+body.opendyslexic th,
+body.opendyslexic td {
+    font-family: var(--opendyslexic-chrome-sans) !important;
+    line-height: 150% !important;
+}
+/*
+body.opendyslexic * {
+    font-family: var(--opendyslexic-chrome-sans) !important;
+}
+*/
+
+body.opendyslexic pre,
+body.opendyslexic code,
+body.opendyslexic pre *,
+body.opendyslexic code * {
+    font-family: var(--opendyslexic-chrome-mono) !important;
+    line-height: 150% !important;
+}
+
+body.opendyslexic .ace_text-input,
+body.opendyslexic .prettyprint {
+    font-family: var(--opendyslexic-chrome-mono) !important;
+}
+
+body.opendyslexic input,
+body.opendyslexic textarea {
+    font-family: var(--opendyslexic-chrome-sans) !important;
+}
+
+/* NYTimes Support */
+body.opendyslexic .story.theme-summary .summary,
+body.opendyslexic .span-ab-bottom-region .story.theme-summary .summary,
+body.opendyslexic .inside-nyt .story.theme-summary .story-heading,
+body.opendyslexic .well .column ul li .story .story-heading {
+    font-family: var(--opendyslexic-chrome-sans) !important;
+    line-height: 150% !important;
+}
+
+body.opendyslexic .inside-nyt .story.theme-summary.no-thumb .story-heading,
+body.opendyslexic .inside-nyt .story.theme-summary .summary {
+    font-family: var(--opendyslexic-chrome-sans) !important;
+    line-height: 150% !important;
+}
+
+body.opendyslexic .recommendations ol li .story-heading,
+body.opendyslexic .tone-news .story.theme-main .story-header .story-heading,
+body.opendyslexic .type-size-small .story.theme-main .story-body-text,
+body.opendyslexic .story.theme-summary .story-heading {
+    font-family: var(--opendyslexic-chrome-sans) !important;
+    line-height: 150% !important;
+}
+
+/* WSJ Support */
+body.opendyslexic article .article_header h1,
+body.opendyslexic article p {
+    font-family: var(--opendyslexic-chrome-sans) !important;
+    line-height: 150% !important;
+}
+
+body.opendyslexic .kix-lineview-content,
+body.opendyslexic .kix-lineview {
+    width: 100% !important;
+}
+
+body.opendyslexic .kix-wordhtmlgenerator-word-node {
+    font-size: initial !important;
+}
+
+body.opendyslexic .bar-title h2{
+    padding-top: 22px !important;
+}
